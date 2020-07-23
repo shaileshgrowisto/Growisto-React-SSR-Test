@@ -1,0 +1,6 @@
+npm install --save react react-dom react-hook-form react-intersection-observer react-redux redux react-transition-group redux-devtools-extension redux-thunk rimraf sass react-intersection-observer classnames react-hot-loader react-router react-router-dom
+npm install --save-dev @types/classnames @types/eventemitter3 @types/node @types/react @types/react-dom @types/react-redux @types/redux @types/react-hot-loader @types/react-router @types/react-router-dom
+npm install --save-dev node-css node-sass ts-node typescript url-loader webpack webpack-cli webpack-dev-middleware webpack-dev-server webpack-flush-chunks webpack-hot-middleware webpack-hot-server-middleware webpack-merge @types/webpack-dev-server ts-loader sass-loader css-loader file-loader handlebars-loader html-loader ignore-loader raw-loader sass-loader ts-loader
+
+npm install --save-dev handlebars-loader mini-css-extract-plugin babel-loader @babel/core webpack-node-externals
+npm install @loadable/component @loadable/server @loadable/babel-plugin @babel/plugin-syntax-dynamic-import --save 
