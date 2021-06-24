@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "React SSR with HOT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development -w",
+    "dev:start": "nodemon ./server-build/index.js",
+    "dev": "npm-run-all --parallel build dev:*"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
     "@loadable/babel-plugin": "^5.12.0",
     "@loadable/component": "^5.12.0",
     "@loadable/server": "^5.12.0",
@@ -29,16 +30,19 @@
     "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.8",
-    "webpack-node-externals": "^1.7.2"
+    "sass": "^1.26.8"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "@types/classnames": "^2.2.10",
     "@types/eventemitter3": "^2.0.2",
     "@types/loadable__server": "^5.12.2",
@@ -62,6 +66,8 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-css": "^0.1.0",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
     "raw-loader": "^4.0.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
@@ -69,13 +75,26 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5",
     "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-flush-chunks": "^2.0.3",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-hot-server-middleware": "^0.6.1",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
