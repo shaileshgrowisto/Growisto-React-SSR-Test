@@ -4,7 +4,7 @@ import React from 'react';
 
 const Button = ({ onClick, label }) => {
   return (
-    <butto onClic={onClick}>
+    <span onClic={onClick}>
       {label}
     </button>
   );
